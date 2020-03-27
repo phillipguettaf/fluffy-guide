@@ -1,0 +1,27 @@
+<<<<<<< HEAD
+/main/
+||||||| merged common ancestors
+=======
+/LICENSE
+/README 2.md
+/README.md
+/appveyor.yml
+/build-eclipse/
+/build.gradle
+/docs/
+/gradle.properties
+/gradle.template.properties
+/gradle/
+/gradlew
+/gradlew.bat
+/node_modules/
+/package.json
+/src/
+/static-analysis/
+/test.txt
+/testingTextFile.rb
+/webpack-main-dev.config.js
+/webpack-main-prod.config.js
+/webpack-main.config.js
+/webpack-test.config.js
+>>>>>>> master

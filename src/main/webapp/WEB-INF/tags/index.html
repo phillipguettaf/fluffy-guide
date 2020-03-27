@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap.css">  
+  </head>
+  <body>
+      {% for greeting in greetings %}
+      <div class="list">
+        {% if greeting.author %}
+          <b>{{ greeting.author.email }}
+            {% if user and user.user_id() == greeting.author.identity %}
+              (You)
+            {% endif %}
+          </b> wrote:
+        {% else %}
+          An anonymous person wrote:
+        {% endif %}
+        <blockquote>{{ greeting.content }}</blockquote>
+      </div>
+      {% endfor %}
+      <div class="form">
+      <form action="/sign?guestbook_name={{ guestbook_name }}" method="post">
+        <div><textarea name="content" class="input-block-level" rows="3"></textarea></div>
+        <div><input type="submit" class="btn btn-large btn-primary" value="Sign Guestbook"></div>
+      </form>
+      </div>
+
+  </body>
+</html>
+{% endautoescape %}
